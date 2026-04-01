@@ -1,238 +1,73 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 Алхимия Душ & Корейский 💗</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
-        
-        :root {
-            --pink: #ff3366;
-            --soft-pink: #ffe6f0;
-            --beige: #f8f1eb;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #fffaf5 0%, #f8e8f0 50%, #e8f0ff 100%);
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 780px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-top: 30px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.2rem;
-            color: #ff3366;
-            margin: 0;
-            letter-spacing: -2px;
-            text-shadow: 0 4px 20px rgba(255, 51, 102, 0.25);
-        }
-
-        .subtitle {
-            font-size: 1.35rem;
-            color: #555;
-            margin-top: 8px;
-            font-weight: 400;
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 45px 40px;
-            margin-bottom: 35px;
-            border-radius: 28px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(10px);
-        }
-
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.1rem;
-            color: #ff3366;
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 65px;
-            height: 3px;
-            background: linear-gradient(to right, #ff3366, #c8a2c8);
-            border-radius: 2px;
-        }
-
-        .drama-item {
-            background: var(--soft-pink);
-            padding: 24px 28px;
-            border-radius: 22px;
-            margin-bottom: 18px;
-            transition: all 0.4s ease;
-            border-left: 5px solid #ff6699;
-        }
-
-        .drama-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(255, 51, 102, 0.18);
-            background: #fff0f5;
-        }
-
-        .drama-title {
-            font-size: 1.45rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 12px;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            padding: 16px 24px;
-            margin-top: 12px;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(45deg, #ff3366, #ff6699);
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(255, 51, 102, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 51, 102, 0.4);
-        }
-
-        /* Корейский блок */
-        #korean-word {
-            background: linear-gradient(135deg, #fffaf5, #f8f0f8);
-            padding: 40px 30px;
-            border-radius: 26px;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 4px solid #ffccd6;
-            box-shadow: 0 10px 30px rgba(255, 153, 204, 0.15);
-            margin-top: 25px;
-            transition: all 0.4s ease;
-        }
-
-        .korean {
-            font-family: 'Noto Sans KR', sans-serif;
-            font-size: 3.4rem;
-            font-weight: 700;
-            color: #ff3366;
-            margin-bottom: 14px;
-        }
-
-        .meaning {
-            font-size: 1.4rem;
-            color: #444;
-            font-weight: 500;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 25px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Алхимия Душ</h1>
-            <p class="subtitle">💗 Дорамы и корейский язык с любовью</p>
-        </header>
-
-        <div class="section">
-            <h2>🌸 Наши любимые дорамы</h2>
-            
-            <div class="drama-item">
-                <div class="drama-title">Алхимия душ (Alchemy of Souls)</div>
-                <button onclick="window.open('https://vk.com/video-64354864_456247272', '_blank')">
-                    ▶ Смотреть 1 сезон полностью на VK Video
-                </button>
+<!-- Прогресс -->
+        <section id="stats">
+            <h2>Прогресс</h2>
+            <p id="stats-info">0 выполнено из 0</p>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
             </div>
+        </section>
 
-            <div class="drama-item">
-                <div class="drama-title">Алые сердца Кореи (The Red Sleeve)</div>
-                <button onclick="window.open('https://vk.com/video-64354864_456247273', '_blank')">
-                    ▶ Смотреть дораму на VK Video
-                </button>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>🇰🇷 Учим корейский вместе</h2>
-            
-            <div class="btn-group">
-                <button onclick="newWord()">Новое слово ✨</button>
-                <button onclick="window.open('https://yes-online.ru/bazovie_frazi_na_koreiskom_yazike/', '_blank')">
-                    Базовые фразы
-                </button>
-            </div>
-
-            <div id="korean-word">
-                Нажми кнопку «Новое слово», чтобы начать ✨
-            </div>
-        </div>
-    </div>
+        <!-- Челлендж дня -->
+        <section id="challenges">
+            <h2>Челлендж дня 💪</h2>
+            <p id="challenge-text">Выполни 5 минут растяжки!</p>
+            <button onclick="newChallenge()">Новый челлендж</button>
+        </section>
+    </main>
 
     <script>
-        const words = [
-            { korean: "안녕하세요", meaning: "Здравствуйте / Привет" },
-            { korean: "감사합니다", meaning: "Спасибо" },
-            { korean: "사랑해요", meaning: "Я тебя люблю" },
-            { korean: "좋아요", meaning: "Нравится / Хорошо / Классно" },
-            { korean: "배고파요", meaning: "Я голоден(а)" },
-            { korean: "미안해요", meaning: "Прости / Извини" },
-            { korean: "예쁘다", meaning: "Красивая" },
-            { korean: "멋있다", meaning: "Крутой / Красивый" },
-            { korean: "보고 싶어요", meaning: "Я скучаю по тебе" },
-            { korean: "자기야", meaning: "Дорогой / Милый" },
-            { korean: "화이팅!", meaning: "Давай! / Удачи! (Fighting!)" },
-            { korean: "맛있어요", meaning: "Вкусно" }
+        let goals = [];
+
+        function addGoal() {
+            const input = document.getElementById("goal-input");
+            const text = input.value.trim();
+            if(text === "") return;
+            goals.push({ text:text, done:false });
+            input.value="";
+            renderGoals();
+            updateProgress();
+        }
+
+        function renderGoals() {
+            const list = document.getElementById("goal-list");
+            list.innerHTML = "";
+            goals.forEach((goal,index)=>{
+                const item = document.createElement("li");
+                item.innerText = goal.text;
+                if(goal.done) item.classList.add("completed");
+                item.addEventListener("click",()=>toggleDone(index));
+                list.appendChild(item);
+            });
+        }
+
+        function toggleDone(index){
+            goals[index].done = !goals[index].done;
+            renderGoals();
+            updateProgress();
+        }
+
+        function updateProgress(){
+            const stats = document.getElementById("stats-info");
+            const fill = document.getElementById("progress-fill");
+            const doneCount = goals.filter(g=>g.done).length;
+            const total = goals.length;
+            stats.innerText = ${doneCount} выполнено из ${total};
+            const percent = total===0?0:(doneCount/total)*100;
+            fill.style.width = percent + "%";
+        }
+
+        // Челленджи
+        const challenges = [
+            "Выполни 5 минут растяжки!",
+            "Выучи 5 новых слов на английском!",
+            "Пей воду в течение часа!",
+            "Напиши 3 вещи, за которые благодарен сегодня!",
+            "Сделай 10 приседаний!"
         ];
 
-        function newWord() {
-            const randomIndex = Math.floor(Math.random() * words.length);
-            const word = words[randomIndex];
-            
-            const container = document.getElementById("korean-word");
-            container.style.opacity = "0";
-
-            setTimeout(() => {
-                container.innerHTML = `
-                    <div class="korean">${word.korean}</div>
-                    <div class="meaning">${word.meaning}</div>
-                `;
-                container.style.opacity = "1";
-            }, 250);
+        function newChallenge(){
+            const idx = Math.floor(Math.random()*challenges.length);
+            document.getElementById("challenge-text").innerText = challenges[idx];
         }
     </script>
 </body>
